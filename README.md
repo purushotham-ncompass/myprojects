@@ -1,30 +1,40 @@
 Topic 1.1.Basics
 --------------------------------------------------
 constanst:- The values that cannot be alterted .
-ex:	let mynum = 10
-	let mynum2:Float = 3.14
+
+ex:	
+```Swift
+let mynum = 10
+let mynum2:Float = 3.14
+```
 variable:- The values that are used to store and also altered
+```Swift
 	var myname = "ravi"
 	var myname:String = "hello"
+```
 Declaring multiples constants and variables 
  ex:
 	var x = 0.0, y = 0.0, z = 0.0
 type-conversion:-
+```Swift
 		let three = 3
 		let pointOneFourOneFiveNine = 0.14159
 		let pi = Double(three) + pointOneFourOneFiveNine
-		let integerPi = Int(pi) //converting to integer
+```	        let integerPi = Int(pi) //converting to integer
 
 Tuples:- A single tuples can contain multiple values with differt data types
 
 	syntax:-
+	   ```Swift
 		var TupleName = (Value1, value2,… any number of values)
+	    ```
 	ex:-
 		var mytuple = ("hello", “world”,123)
 		print(“The code is\(mytuple.0)”) // accessing the tuple with "." operator
 		print("\(mytuple.1)")// accessing the 2nd element of the tuple
 		var error501 = (errorCode: 501, description: “Not Implemented”)
 		print(error501.errorCode)   // prints 501. 
+	
 
 Optionals:-An optional represents two possibilities: 
 	   Either there is a value, and you can unwrap the 
@@ -34,7 +44,7 @@ ex:-
 	var n1:Int? // here n1 may contains a value or may not contains a value
 	var myStr: String?
 program:-
-```
+```Swift
 var myString:String? = nil
 
 if myString != nil {
@@ -46,7 +56,7 @@ if myString != nil {
 
 Force Unwrapping:-when the variable is defined as optional ,to get that value we should unwrap by "!" mark
 ex:-
-```
+```Swift
 	var myString:String? // if we provide ! here then automatic unwraping will done
 	myString = "Hello, Swift 4!"
 	if myString != nil {
@@ -59,13 +69,13 @@ ex:-
 Optional Binding:-  Use optional binding to find out whether an optional contains a value, 
 	            and if so, to make that value available as a temporary constant or variable.
 		    syntax:-
-        ```
+        ```swift
 				if let constantName = someOptional {
  					  statements
 					}
           ```
 		    program:-
-        ```
+        ```swift
 				var myString:String?
 				myString = "Hello, Swift 4!"
 
@@ -88,17 +98,16 @@ comparison operators:-
 Terinary condions operators:-A ternary operator evaluates a condition and executes a block of code 
 			     based on the condition.
 			     syntax:-
-           ```
+           ```swift
 					condition ? expression1 : expression2
           ```
 			     ex:-
-         ```  
-				let marks = 60
+         		let marks = 60
 				let result = (marks >= 40) ? "pass" : "fail"
 				print("You " + result + " the exam")
         ```
 				program-2
-        ```
+        ```swift
 				let num = 15
 				let result = (num > 0) ? "Positive Number" : "Negative Number"
 				print(result)
