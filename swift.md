@@ -392,3 +392,35 @@ bakery.delegate = shop
 bakery.makeCookie()
 // Output: Yay! A new cookie was baked, with size 6
 ```
+
+
+```swift
+
+class Developer
+{
+var managerReference :Manger?
+	func developerAdding(a :Int ,b :Int)	
+	{
+	let myresult. = a+b 
+	managerReference?.didFinishAdding(result :myresult) 
+}
+}
+class Manager
+{
+var developer : Developer?
+ init(_developer :Developer){
+ developer = _developer
+ developer?.managerReference = self
+ }
+ 
+ func didFinishAdding(result : Int){
+ print(result)
+ }
+ func addTwoNumber(x:Int ,y:Int){
+ developer?.developerAdding(a: x ,b : y)
+ }
+ }
+ 
+ let objManger = Manger(_developer : Developer())
+ objManager.addTwoNumber(x :10 , y:20)
+```
